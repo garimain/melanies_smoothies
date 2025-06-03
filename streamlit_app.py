@@ -22,7 +22,8 @@ customer_name = st.text_input("Please enter your name", "enter your name")
 st.write("customer name", customer_name)
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'), col('SEARCH_ON'))
-#st.dataframe(data=my_dataframe, use_container_width=True)
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()
 
 ingredients_list = st.multiselect(
     "What are your favorite fruits?",
